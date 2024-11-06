@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes swing {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.gradientBg{
+  background-image: linear-gradient(rgba(129, 129, 129, 0.85), transparent 80%);
+}
+
+.swinging {
+  animation: swing 2s infinite ease-in-out; /* Adjust duration as needed */
+}
+
+/* body, html {
+  cursor: none; 
+} */
+
+a, button, .clickable-element {
+  cursor: pointer; /* Shows pointer cursor on links, buttons, or other clickable elements */
+}
+.text-gradient-blue {
+  background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-red {
+  background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.text-gradient-yellow {
+  background: -webkit-linear-gradient(top left, #ffc900, #ffa101);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-green {
+  background: -webkit-linear-gradient(top left, #04c100, #038100);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: -webkit-linear-gradient(top left, #ff00a8, #cc0086);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clipmask {
+
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.2);
+  background-image: url('/video/bubble.gif'); /* Adjust path if necessary */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+ 
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+}

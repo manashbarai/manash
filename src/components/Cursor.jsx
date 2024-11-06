@@ -1,37 +1,38 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from "gsap"
+import React, { useEffect, useRef } from 'react';
 
 const Cursor = () => {  
-  const size = 30
-  const circle = useRef(null)
-  const mouse = useRef({ x: 0, y: 0 })
-
-  const manageMouseMove = (e) => {
-    const { clientX, clientY } = e
-    mouse.current = { x: clientX, y: clientY }
-    moveCircle(clientX, clientY)
-  }
-
-  const moveCircle = (x, y) => {
-    if (circle.current) {
-      gsap.set(circle.current, { x, y, xPercent: -50, yPercent: -50 })
-    }
-  }
+  const size = 20;
+  const circle = useRef(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener("mousemove", manageMouseMove)
-      return () => window.removeEventListener("mousemove", manageMouseMove)
-    }
-  }, [])
+    const updateCursorPosition = (e) => {
+      const { clientX, clientY } = e;
+      if (circle.current) {
+        // Use `requestAnimationFrame` to make the cursor move smoothly without delay
+        requestAnimationFrame(() => {
+          circle.current.style.transform = `translate(${clientX - size / 2}px, ${clientY - size / 2}px)`;
+        });
+      }
+    };
+
+    // Add the mousemove event listener
+    window.addEventListener('mousemove', updateCursorPosition);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('mousemove', updateCursorPosition);
+  }, []);
 
   return (
-    <div 
+    <div
       ref={circle}
-      className="fixed top-0 start-0 bg-red-600 rounded-full pointer-events-none"
-      style={{ width: size, height: size }}
+      className="fixed top-0 left-0 bg-zinc-900 mix-blend-difference rounded-full pointer-events-none"
+      style={{
+        width: `${size}px`,
+        height: `${size}px`,
+        position: 'fixed',
+      }}
     ></div>
-  )
-}
+  );
+};
 
-export default Cursor
+export default Cursor;
