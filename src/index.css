@@ -7,35 +7,46 @@
   0% {
     transform: rotate(-3deg);
   }
+
   50% {
     transform: rotate(3deg);
   }
+
   100% {
     transform: rotate(-3deg);
   }
 }
 
-.gradientBg{
+.gradientBg {
   background-image: linear-gradient(rgba(129, 129, 129, 0.85), transparent 80%);
 }
 
 .swinging {
-  animation: swing 2s infinite ease-in-out; /* Adjust duration as needed */
+  animation: swing 2s infinite ease-in-out;
+  /* Adjust duration as needed */
 }
 
 /* body, html {
   cursor: none; 
 } */
-
-a, button, .clickable-element {
-  cursor: pointer; /* Shows pointer cursor on links, buttons, or other clickable elements */
+.text-shadow {
+  text-shadow: 2px 2px #ff0000 !important;
 }
+
+a,
+button,
+.clickable-element {
+  cursor: pointer;
+  /* Shows pointer cursor on links, buttons, or other clickable elements */
+}
+
 .text-gradient-blue {
   background: -webkit-linear-gradient(top left, #03cffe, #397dd6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .text-gradient-red {
   background: -webkit-linear-gradient(top left, #e95d0f, #d61f5f);
   background-clip: text;
@@ -43,12 +54,14 @@ a, button, .clickable-element {
   -webkit-text-fill-color: transparent;
 
 }
+
 .text-gradient-yellow {
   background: -webkit-linear-gradient(top left, #ffc900, #ffa101);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .text-gradient-green {
   background: -webkit-linear-gradient(top left, #04c100, #038100);
   background-clip: text;
@@ -67,12 +80,61 @@ a, button, .clickable-element {
 
   font-weight: bold;
   color: rgba(255, 255, 255, 0.2);
-  background-image: url('/video/bubble.gif'); /* Adjust path if necessary */
+  background-image: url('/video/bubble.gif');
+  /* Adjust path if necessary */
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
- 
+
   -webkit-background-clip: text;
   background-clip: text;
+
+}
+
+
+.topTo {
+  position: fixed;
+  animation: light 3s ease forwards, swing 2s ease-in-out infinite 1s;
+  /* `light` runs once for 1 second and holds position, `swing` repeats infinitely after 2s delay */
+}
+
+@keyframes light {
+  0% {
+    top: -1000px;
+  }
+  100% {
+    top:0px;
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+
+
+.fromBottom {
+  position: fixed;
+  animation: social 3s ease forwards;
+
   
+
+}
+@keyframes social{
+
+  0% {
+    bottom: -1000px;
+  }
+  100% {
+    bottom:0px;
+  }
+
 }
