@@ -83,7 +83,7 @@ button,
   background-image: url('/video/bubble.gif');
   /* Adjust path if necessary */
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center;
 
   -webkit-background-clip: text;
@@ -94,7 +94,8 @@ button,
 
 .topTo {
   position: fixed;
-  animation: light 3s ease forwards, swing 2s ease-in-out infinite 1s;
+  animation: light 2s ease forwards, swing 2s ease-in-out infinite 1s;
+  animation-delay: 0.5s;
   /* `light` runs once for 1 second and holds position, `swing` repeats infinitely after 2s delay */
 }
 
@@ -123,8 +124,9 @@ button,
 
 .fromBottom {
   position: fixed;
-  animation: social 3s ease forwards;
-
+  animation: social 1.5s ease forwards;
+  
+animation-delay:1s;
   
 
 }

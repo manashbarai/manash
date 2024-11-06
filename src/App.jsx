@@ -21,7 +21,7 @@ const App = () => {
  
 
   return (
-    <div className="h-[100vh] bg-zinc-800">
+    <div className="h-[100vh] bg-zinc-900">
       <NoiseBackground />
       <ProfileSection sizeIncrese={sizeIncrese} />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />

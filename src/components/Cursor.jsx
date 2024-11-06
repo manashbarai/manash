@@ -49,7 +49,7 @@ const Cursor = (props) => {
   return (
     <div
       ref={circle}
-      className={`fixed top-0 left-0 bg-zinc-${color}  mix-blend-difference rounded-full pointer-events-none`}
+      className={`fixed top-0 left-0 bg-zinc-900  mix-blend-difference rounded-full pointer-events-none`}
       style={{
         width: `${size}px`,
         height: `${size}px`,
