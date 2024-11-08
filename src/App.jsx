@@ -22,7 +22,7 @@ const App = () => {
  
 
   return (
-    <div className="h-[100vh] bg-zinc-900">
+    <div className=" bg-zinc-900">
       <Navbar/>
       <NoiseBackground />
       <ProfileSection sizeIncrese={sizeIncrese} />
