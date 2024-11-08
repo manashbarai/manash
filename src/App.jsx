@@ -7,6 +7,7 @@ import ProfileSection from "./page/Home";
 import RightMail from "./components/RightMail";
 
 import "./index.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [size, setSize] = useState(20);
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <div className="h-[100vh] bg-zinc-900">
+      <Navbar/>
       <NoiseBackground />
       <ProfileSection sizeIncrese={sizeIncrese} />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
