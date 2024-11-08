@@ -140,3 +140,16 @@ animation-delay:1s;
   }
 
 }
+
+
+/* //navbar */
+
+.nav li{
+  width: 90px;
+  display: flex;
+  justify-content: center;
+ padding: 9px 12px;
+ background: rgba(255, 255, 255, 0.2);
+ margin-left: 1px;
+  
+}
