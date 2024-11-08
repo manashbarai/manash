@@ -43,7 +43,7 @@ const ProfileSection = ({ sizeIncrese }) => {
           ref={blur}
           className=" tracking-wider  text-orange-50 font-semibold"
           onMouseLeave={() => sizeIncrese(20, 900)}
-          onMouseEnter={() => sizeIncrese(1, 100)}
+          onMouseEnter={() => sizeIncrese(50, 100)}
         >
           I’m a <span className="text-gradient-blue">Full Stack </span>{" "}
           <span className="text-gradient-red ">Developer </span> & I build
@@ -56,7 +56,7 @@ const ProfileSection = ({ sizeIncrese }) => {
           ref={peraRef}
           className="text-orange-50"
           onMouseLeave={() => sizeIncrese(20, 900)}
-          onMouseEnter={() => sizeIncrese(70, 100)}
+          onMouseEnter={() => sizeIncrese(1, 100)}
         >
           <span>Designed with ❤️ and a lot of ☕️</span> <br />
           Currently working with{" "}
