@@ -8,6 +8,7 @@ import RightMail from "./components/RightMail";
 
 import "./index.css";
 import Navbar from "./components/Navbar";
+import Experience from "./page/Project";
 
 const App = () => {
   const [size, setSize] = useState(20);
@@ -25,9 +26,17 @@ const App = () => {
     <div className=" bg-zinc-900">
       <Navbar/>
       <NoiseBackground />
-      <ProfileSection sizeIncrese={sizeIncrese} />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
       <RightMail sizeIncrese={sizeIncrese} />
+
+
+      <section id="home"><ProfileSection sizeIncrese={sizeIncrese} /></section>
+      <section id="about">About Section</section>
+<section id="project"> <Experience /> </section>
+<section id="contact">Contact Section</section>
+<section id="resume">Resume Section</section>
+
+      
 
       {/* Correctly assign the ref here */}
      

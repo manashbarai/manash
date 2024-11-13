@@ -9,13 +9,15 @@ const Navbar = () => {
   const linksRef = useRef([]);
 
   // Audio reference
-  const audioRef = useRef(new Audio("/audio/waterDrop.mp3")); // Replace with your actual audio file path.
+  const audioRef = useRef(new Audio("/click-sound.mp3")); // Replace with your actual audio file path.
 
   const handleMouseEnter = (position) => {
     setHoverPosition(position);
   };
 
-  const handleClick = (section) => {
+  const handleClick = (e, section) => {
+    e.preventDefault(); // Prevent default anchor click behavior
+
     // Play the click sound
     const audio = audioRef.current;
     audio.currentTime = 0; // Reset audio to the beginning
@@ -64,7 +66,11 @@ const Navbar = () => {
 
   return (
     <div ref={navbarRef} className="flex shadow shadow-[#2b2b2b] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center">
-      <div ref={logoRef} className="logo flex items-center text-gray-400 text-lg font-bold px-4">
+      <div
+        ref={logoRef}
+        className="logo flex items-center text-gray-400 text-lg font-bold px-4 cursor-pointer"
+        onClick={(e) => handleClick(e, 'home')} // Scrolls to home section on logo click
+      >
         LOGO
       </div>
 
@@ -73,10 +79,10 @@ const Navbar = () => {
           <a
             key={text}
             ref={(el) => (linksRef.current[index] = el)}
-            href="#"
+            href={`#${text.toLowerCase()}`} // Anchor for target section
             className="text-center z-20 cursor-pointer py-1 w-[70px] inline-block"
             onMouseEnter={() => handleMouseEnter(text.toLowerCase())}
-            onClick={() => handleClick(text.toLowerCase())} // Updated for click
+            onClick={(e) => handleClick(e, text.toLowerCase())} // Smooth scroll for other links
           >
             {text}
           </a>
