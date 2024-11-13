@@ -9,6 +9,7 @@ import RightMail from "./components/RightMail";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Experience from "./page/Project";
+import AboutMe from "./page/About";
 
 const App = () => {
   const [size, setSize] = useState(20);
@@ -23,7 +24,7 @@ const App = () => {
  
 
   return (
-    <div className=" bg-zinc-900">
+    <div className=" bg-gray-900">
       <Navbar/>
       <NoiseBackground />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
@@ -31,7 +32,7 @@ const App = () => {
 
 
       <section id="home"><ProfileSection sizeIncrese={sizeIncrese} /></section>
-      <section id="about">About Section</section>
+      <section id="about"> <AboutMe/> </section>
 <section id="project"> <Experience /> </section>
 <section id="contact">Contact Section</section>
 <section id="resume">Resume Section</section>
