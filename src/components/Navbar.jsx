@@ -4,13 +4,33 @@ import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [hoverPosition, setHoverPosition] = useState('start-home');
-  
   const navbarRef = useRef();
   const logoRef = useRef();
   const linksRef = useRef([]);
 
+  // Audio reference
+  const audioRef = useRef(new Audio("/audio/waterDrop.mp3")); // Replace with your actual audio file path.
+
   const handleMouseEnter = (position) => {
     setHoverPosition(position);
+  };
+
+  const handleClick = (section) => {
+    // Play the click sound
+    const audio = audioRef.current;
+    audio.currentTime = 0; // Reset audio to the beginning
+    audio.play();
+
+    // Smooth scroll to the target section
+    const targetElement = document.getElementById(section);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // Stop audio after 500ms
+    setTimeout(() => {
+      audio.pause();
+    }, 500);
   };
 
   useGSAP(() => {
@@ -48,7 +68,7 @@ const Navbar = () => {
         LOGO
       </div>
 
-      <nav className="relative z-10 mr-2 mb-1  justify-end flex items-center gap-4 text-gray-400 font-semibold">
+      <nav className="relative z-10 mr-2 mb-1 justify-end flex items-center gap-4 text-gray-400 font-semibold">
         {["About", "Project", "Contact", "Resume"].map((text, index) => (
           <a
             key={text}
@@ -56,6 +76,7 @@ const Navbar = () => {
             href="#"
             className="text-center z-20 cursor-pointer py-1 w-[70px] inline-block"
             onMouseEnter={() => handleMouseEnter(text.toLowerCase())}
+            onClick={() => handleClick(text.toLowerCase())} // Updated for click
           >
             {text}
           </a>
