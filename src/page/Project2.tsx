@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TfiArrowTopRight } from "react-icons/tfi";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -82,8 +83,9 @@ const Timeline = () => {
       <div style={{ height: "calc(100%)" }} className="absolute w-1 top-0 bg-zinc-700 z-50 left-1/2 transform -translate-x-1/2"></div>
       {projects.map((project, index) => (
         <div
+      
           key={index}
-          className={`timeline-item flex items-center w-full my-8 ${
+          className={`timeline-item flex items-center w-full my-8 group cursor-pointer ${
             index % 2 === 0 ? "justify-start" : "justify-end"
           }`}
         >
@@ -99,7 +101,8 @@ const Timeline = () => {
                 : "rounded-br-2xl rounded-tr-2xl"
             } bg-zinc-800 text-white p-6 shadow-lg w-1/2`}
           >
-            <h3 className="text-lg font-semibold">{project.title}</h3>
+            <div className="text-lg font-semibold flex justify-between items-center">{project.title} <span className="mt-1 group-hover:scale-150 transition-all duration-100"><TfiArrowTopRight size={10} /></span> 
+            </div>
             <p className="mt-2 text-sm text-zinc-600">{project.description}</p>
             <ul className="flex gap-2 mt-5 flex-wrap">
               {project.skill.map((s, i) => {
