@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className=" text-white text-center h-[100vh] flex flex-col justify-center w-1/2 m-auto relative">
-      <h2 className="text-3xl font-bold ">Contact</h2>
+      <h2 className="text-3xl font-bold text-zinc-500 ">Contact</h2>
       <p className="mt-2">
         Get in touch with me if you want to discuss a project or maybe just say
         hi :)
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
           required
         />
         <input
@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
           required
         />
         <textarea
@@ -57,12 +57,12 @@ const ContactForm: React.FC = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-zinc-600"
           required
         />
         <button
           type="submit"
-          className="w-full p-3 bg-gray-500 text-black font-bold rounded-md hover:bg-gray-300 transition duration-200"
+          className="w-full p-3 bg-zinc-500 text-black font-bold rounded-md hover:bg-zinc-300 transition duration-200"
         >
           SEND
         </button>
@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
         <p className="">or reach me at</p>
         <a
           href="mailto:hello@nirnejak.com"
-          className="text-gray-400 hover:text-gray-300 transition duration-200"
+          className="text-zinc-400 hover:text-zinc-300 transition duration-200"
         >
           🔺 hello@nirnejak.com
         </a>

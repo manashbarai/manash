@@ -26,7 +26,7 @@ const App = () => {
  
 
   return (
-    <div className=" bg-gray-900">
+    <div className=" bg-zinc-900">
       <Navbar/>
       <NoiseBackground />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
@@ -38,7 +38,6 @@ const App = () => {
 <section id="experience"> <Experience /> </section>
 <section id="project"> <ProjectList /> </section>
 <section id="contact"> <ContactForm/> </section>
-<section id="resume">Resume Section</section>
 
       
 

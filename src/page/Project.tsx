@@ -79,7 +79,7 @@ const Experience = () => {
   }, [selectedExperience]);
 
   return (
-    <div className=" text-gray-500 min-h-screen flex w-1/2 m-auto flex-col items-center justify-center relative">
+    <div className=" text-zinc-500 min-h-screen flex w-1/2 m-auto flex-col items-center justify-center relative">
       <h2 className="text-3xl font-bold mb-8 w-full">Experience</h2>
       <div className="flex w-full max-w-4xl">
         {/* Left Column */}
@@ -92,7 +92,7 @@ const Experience = () => {
                 className={`cursor-pointer ${
                   selectedExperience === exp.title
                     ? "text-[rgba(255,247,233,0.9)] font-semibold"
-                    : "text-gray-400"
+                    : "text-zinc-400"
                 } hover:text-[rgba(250,214,152,0.9)]`}
               >
                 {exp.title}
@@ -106,7 +106,7 @@ const Experience = () => {
           <h3 className="text-xl font-semibold">
             {experienceDetails[selectedExperience].role}
           </h3>
-          <p className="text-sm text-gray-400 mb-4">
+          <p className="text-sm text-zinc-400 mb-4">
             {experienceDetails[selectedExperience].duration}
           </p>
           <ul className="list-disc space-y-2 pl-5">
@@ -115,7 +115,7 @@ const Experience = () => {
                 <li
                   key={index}
                   ref={(el) => (listItemsRef.current[index] = el)}
-                  className="text-gray-300"
+                  className="text-zinc-300"
                 >
                   {desc}
                 </li>

@@ -8,12 +8,12 @@ const AboutMe: React.FC = () => {
       <div className=" m-auto flex flex-col md:flex-row items-center">
         <div className="flex-1 md:mr-8">
           <h2 className="text-xl text-purple-400 font-bold mb-4">
-           <span className="text-white text-3xl">About Me</span>
+           <span className="text-zinc-500 text-3xl">About Me</span>
           </h2>
 
           
 
-          <p className="text-gray-300 mb-4">
+          <p className="text-zinc-300 mb-4">
             I am a full-stack web developer with a passion for problem-solving
             and a love for coding that started during my civil engineering
             studies. My expertise lies in <span className="text-[rgba(255,223,167,0.9)]"> JavaScript, React,React Native Expo, Node.js, Express,
@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
             mirrors my approach to overcoming coding challenges.
           </p>
 
-          <p className="text-gray-300 mb-4">
+          <p className="text-zinc-300 mb-4">
             Here's my most recent{" "}
             <a
               href="https://resume.com"
@@ -36,12 +36,12 @@ const AboutMe: React.FC = () => {
             , reflecting my latest experiences and skills.
           </p>
 
-          <p className="text-gray-300 mb-4">
+          <p className="text-zinc-300 mb-4">
             Here are a few technologies I’ve been working with :
           </p>
 
           {/* Technologies List */}
-          <div className="grid grid-cols-2 gap-2 text-gray-400">
+          <div className="grid grid-cols-2 gap-2 text-zinc-400">
              <p>• Html</p>
             <p>• Css</p>
            
@@ -60,7 +60,7 @@ const AboutMe: React.FC = () => {
 
         {/* Image */}
       </div>
-      <div className="absolute font-semibold flex items-center gap-2 bottom-0 start-0 text-gray-600 text-xs tracking-wider">Playing <FaChess className="text-[rgba(235,209,164,0.5)]" size={13} /> at <a href="https://lichess.org/@/mbarai" target="_blank" rel="noopener noreferrer">Lichess</a>
+      <div className="absolute font-semibold flex items-center gap-2 bottom-0 start-0 text-zinc-600 text-xs tracking-wider">Playing <FaChess className="text-[rgba(235,209,164,0.5)]" size={13} /> at <a href="https://lichess.org/@/mbarai" target="_blank" rel="noopener noreferrer">Lichess</a>
 
       </div>    </section>
   );

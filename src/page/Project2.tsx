@@ -71,15 +71,15 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="relative max-w-3xl mx-auto text-gray-200 pt-16">
-      <h1 className="text-3xl my-6 font-semibold">Projects</h1>
+    <div className="relative max-w-3xl mx-auto text-zinc-200 pt-16">
+      <h1 className="text-3xl font-bold mb-8 w-full my-6 text-zinc-500">Projects</h1>
       <p className="capitalize">
         Some things which I built during my job and freelancing that helped my IT career growth:
       </p>
       <div className="relative">
 
       
-      <div style={{ height: "calc(100%)" }} className="absolute w-1 top-0 bg-gray-700 z-50 left-1/2 transform -translate-x-1/2"></div>
+      <div style={{ height: "calc(100%)" }} className="absolute w-1 top-0 bg-zinc-700 z-50 left-1/2 transform -translate-x-1/2"></div>
       {projects.map((project, index) => (
         <div
           key={index}
@@ -88,7 +88,7 @@ const Timeline = () => {
           }`}
         >
           {index % 2 !== 0 && (
-            <div className="w-1/2 text-right pr-8 text-gray-500 text-sm tracking-wider">
+            <div className="w-1/2 text-right pr-8 text-zinc-500 text-sm tracking-wider">
               {project.oppositeContent}
             </div>
           )}
@@ -97,10 +97,10 @@ const Timeline = () => {
               index % 2 === 0
                 ? "rounded-tl-2xl rounded-bl-2xl"
                 : "rounded-br-2xl rounded-tr-2xl"
-            } bg-gray-800 text-white p-6 shadow-lg w-1/2`}
+            } bg-zinc-800 text-white p-6 shadow-lg w-1/2`}
           >
             <h3 className="text-lg font-semibold">{project.title}</h3>
-            <p className="mt-2 text-sm text-gray-600">{project.description}</p>
+            <p className="mt-2 text-sm text-zinc-600">{project.description}</p>
             <ul className="flex gap-2 mt-5 flex-wrap">
               {project.skill.map((s, i) => {
                 return (
@@ -115,7 +115,7 @@ const Timeline = () => {
             </ul>
           </div>
           {index % 2 === 0 && (
-            <div className="w-1/2 pl-8 text-gray-500 text-sm tracking-wider">{project.oppositeContent}</div>
+            <div className="w-1/2 pl-8 text-zinc-500 text-sm tracking-wider">{project.oppositeContent}</div>
           )}
         </div>
       ))}
