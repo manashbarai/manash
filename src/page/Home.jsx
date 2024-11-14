@@ -28,7 +28,7 @@ const ProfileSection = ({ sizeIncrese }) => {
   });
 
   return (
-    <div className="w-1/2 h-[100vh] mx-auto flex justify-center items-center ">
+    <div className="w-1/2 h-[98vh] mx-auto flex justify-center items-center  relative">
       <div className="flex flex-col gap-5">
         <h1
           ref={titleref}
@@ -58,7 +58,7 @@ const ProfileSection = ({ sizeIncrese }) => {
           onMouseLeave={() => sizeIncrese(20, 900)}
           onMouseEnter={() => sizeIncrese(1, 100)}
         >
-          <span>Designed with ❤️ and a lot of ☕️</span> <br />
+         
           Currently working with{" "}
           <span className="text-gradient-green font-semibold tracking-wide">
             {" "}
@@ -71,6 +71,7 @@ const ProfileSection = ({ sizeIncrese }) => {
           </span>
         </p>
       </div>
+       <div className="absolute bottom-0 start-0 text-gray-600 text-xs">Designed with ❤️ and a lot of ☕️</div> 
     </div>
   );
 };

@@ -65,7 +65,7 @@ const Navbar = () => {
   });
 
   return (
-    <div ref={navbarRef} className="flex shadow shadow-[#2b2b2b] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center">
+    <div ref={navbarRef} className="flex shadow shadow-[#111111] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center bg-gray-900/30 backdrop-blur-md z-50">
       <div
         ref={logoRef}
         className="logo flex items-center text-gray-400 text-lg font-bold px-4 cursor-pointer"
@@ -75,7 +75,7 @@ const Navbar = () => {
       </div>
 
       <nav className="relative z-10 mr-2 mb-1 justify-end flex items-center gap-4 text-gray-400 font-semibold">
-        {["About", "Project", "Contact", "Resume"].map((text, index) => (
+        {["About", "Experience", "Contact", "Resume"].map((text, index) => (
           <a
             key={text}
             ref={(el) => (linksRef.current[index] = el)}
@@ -94,7 +94,7 @@ const Navbar = () => {
             hoverPosition === 'resume' ? 'rounded-b-lg rounded-br-2xl' : 'rounded-b-lg'
           } transition-all duration-300 ${
             hoverPosition === 'about' ? '-left-1 w-[75px]' :
-            hoverPosition === 'project' ? 'left-[84px] w-[75px]' :
+            hoverPosition === 'experience' ? 'left-[76px] w-[95px]' :
             hoverPosition === 'contact' ? 'left-[169px] w-[75px]' :
             hoverPosition === 'resume' ? 'left-[250px] w-[80px]' : ''
           }`}

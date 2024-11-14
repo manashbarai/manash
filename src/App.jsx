@@ -33,7 +33,7 @@ const App = () => {
 
       <section id="home"><ProfileSection sizeIncrese={sizeIncrese} /></section>
       <section id="about"> <AboutMe/> </section>
-<section id="project"> <Experience /> </section>
+<section id="experience"> <Experience /> </section>
 <section id="contact">Contact Section</section>
 <section id="resume">Resume Section</section>
 
