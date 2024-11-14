@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import clickAudio from '/audio/clickOption.wav';
 
 const Navbar = () => {
   const [hoverPosition, setHoverPosition] = useState('start-home');
@@ -9,18 +10,18 @@ const Navbar = () => {
   const linksRef = useRef([]);
 
   // Audio reference
-  const audioRef = useRef(new Audio("/click-sound.mp3")); // Replace with your actual audio file path.
+  const audioRef = useRef(new Audio(clickAudio));
 
   const handleMouseEnter = (position) => {
     setHoverPosition(position);
   };
 
   const handleClick = (e, section) => {
-    e.preventDefault(); // Prevent default anchor click behavior
+    e.preventDefault();
 
     // Play the click sound
     const audio = audioRef.current;
-    audio.currentTime = 0; // Reset audio to the beginning
+    audio.currentTime = 0;
     audio.play();
 
     // Smooth scroll to the target section
@@ -28,11 +29,6 @@ const Navbar = () => {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-
-    // Stop audio after 500ms
-    setTimeout(() => {
-      audio.pause();
-    }, 500);
   };
 
   useGSAP(() => {
@@ -64,6 +60,7 @@ const Navbar = () => {
     });
   });
 
+  
   return (
     <div ref={navbarRef} className="flex shadow shadow-[#111111] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center bg-gray-900/30 backdrop-blur-md z-50">
       <div
