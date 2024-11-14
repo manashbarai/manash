@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { IoIosMailUnread } from "react-icons/io";
 
 interface FormData {
@@ -8,9 +8,15 @@ interface FormData {
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -18,13 +24,15 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission (e.g., send form data to an API or email service)
-    console.log(formData);
   };
 
   return (
     <div className=" text-white text-center h-[100vh] flex flex-col justify-center w-1/2 m-auto relative">
       <h2 className="text-3xl font-bold ">Contact</h2>
-      <p className="mt-2">Get in touch with me if you want to discuss a project or maybe just say hi :)</p>
+      <p className="mt-2">
+        Get in touch with me if you want to discuss a project or maybe just say
+        hi :)
+      </p>
       <form onSubmit={handleSubmit} className=" mx-auto mt-8  w-full">
         <input
           type="text"
@@ -54,20 +62,21 @@ const ContactForm: React.FC = () => {
         />
         <button
           type="submit"
-          className="w-full p-3 bg-gray-200 text-black font-bold rounded-md hover:bg-gray-300 transition duration-200"
+          className="w-full p-3 bg-gray-500 text-black font-bold rounded-md hover:bg-gray-300 transition duration-200"
         >
           SEND
         </button>
       </form>
 
-      <div className='absolute bottom-0 text-xs flex gap-2'>
-      <p className="">or reach me at</p>
-      <a href="mailto:hello@nirnejak.com" className="text-gray-400 hover:text-gray-300 transition duration-200">
-      🔺   hello@nirnejak.com
-      </a>
-
+      <div className="absolute bottom-0 text-xs flex gap-2">
+        <p className="">or reach me at</p>
+        <a
+          href="mailto:hello@nirnejak.com"
+          className="text-gray-400 hover:text-gray-300 transition duration-200"
+        >
+          🔺 hello@nirnejak.com
+        </a>
       </div>
-      
     </div>
   );
 };

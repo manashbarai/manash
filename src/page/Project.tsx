@@ -83,7 +83,7 @@ const Experience = () => {
       <h2 className="text-3xl font-bold mb-8 w-full">Experience</h2>
       <div className="flex w-full max-w-4xl">
         {/* Left Column */}
-        <div className="w-1/3 border-l-2 border-purple-500">
+        <div className="w-1/3 border-l-2 border-[rgba(255,233,195,0.9)]">
           <ul className="space-y-4 pl-4">
             {experiences.map((exp, index) => (
               <li
@@ -91,9 +91,9 @@ const Experience = () => {
                 onClick={() => setSelectedExperience(exp.title)}
                 className={`cursor-pointer ${
                   selectedExperience === exp.title
-                    ? "text-purple-500 font-semibold"
+                    ? "text-[rgba(255,247,233,0.9)] font-semibold"
                     : "text-gray-400"
-                } hover:text-purple-500`}
+                } hover:text-[rgba(250,214,152,0.9)]`}
               >
                 {exp.title}
               </li>
