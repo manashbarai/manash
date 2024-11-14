@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoIosMailUnread } from "react-icons/io";
 
 interface FormData {
   name: string;
@@ -21,17 +22,17 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#1a1a1a', padding: '2rem', color: '#fff', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Contact</h2>
-      <p>Get in touch with me if you want to discuss a project or maybe just say hi :)</p>
-      <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '2rem auto' }}>
+    <div className=" text-white text-center h-[100vh] flex flex-col justify-center w-1/2 m-auto relative">
+      <h2 className="text-3xl font-bold ">Contact</h2>
+      <p className="mt-2">Get in touch with me if you want to discuss a project or maybe just say hi :)</p>
+      <form onSubmit={handleSubmit} className=" mx-auto mt-8  w-full">
         <input
           type="text"
           name="name"
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          style={inputStyle}
+          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
           required
         />
         <input
@@ -40,7 +41,7 @@ const ContactForm: React.FC = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          style={inputStyle}
+          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
           required
         />
         <textarea
@@ -48,40 +49,27 @@ const ContactForm: React.FC = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          style={{ ...inputStyle, height: '100px' }}
+          className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-gray-600"
           required
         />
-        <button type="submit" style={buttonStyle}>
+        <button
+          type="submit"
+          className="w-full p-3 bg-gray-200 text-black font-bold rounded-md hover:bg-gray-300 transition duration-200"
+        >
           SEND
         </button>
       </form>
-      <p>or reach me at</p>
-      <a href="mailto:hello@nirnejak.com" style={{ color: '#b0b0b0', textDecoration: 'none' }}>
-        hello@nirnejak.com
+
+      <div className='absolute bottom-0 text-xs flex gap-2'>
+      <p className="">or reach me at</p>
+      <a href="mailto:hello@nirnejak.com" className="text-gray-400 hover:text-gray-300 transition duration-200">
+      🔺   hello@nirnejak.com
       </a>
+
+      </div>
+      
     </div>
   );
-};
-
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '0.8rem',
-  marginBottom: '1rem',
-  border: 'none',
-  borderRadius: '4px',
-  backgroundColor: '#2e2e2e',
-  color: '#fff',
-};
-
-const buttonStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '0.8rem',
-  border: 'none',
-  borderRadius: '4px',
-  backgroundColor: '#f5f5f5',
-  color: '#000',
-  fontWeight: 'bold',
-  cursor: 'pointer',
 };
 
 export default ContactForm;

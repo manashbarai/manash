@@ -72,7 +72,7 @@ const Navbar = () => {
       </div>
 
       <nav className="relative z-10 mr-2 mb-1 justify-end flex items-center gap-4 text-gray-400 font-semibold">
-        {["About", "Experience", "Contact", "Resume"].map((text, index) => (
+        {["About", "Experience","Project", "Contact", "Resume"].map((text, index) => (
           <a
             key={text}
             ref={(el) => (linksRef.current[index] = el)}
@@ -92,8 +92,9 @@ const Navbar = () => {
           } transition-all duration-300 ${
             hoverPosition === 'about' ? '-left-1 w-[75px]' :
             hoverPosition === 'experience' ? 'left-[76px] w-[95px]' :
-            hoverPosition === 'contact' ? 'left-[169px] w-[75px]' :
-            hoverPosition === 'resume' ? 'left-[250px] w-[80px]' : ''
+            hoverPosition === 'project' ? 'left-[169px] w-[75px]' :
+            hoverPosition === 'contact' ? 'left-[253px] w-[80px]' :
+            hoverPosition === 'resume' ? 'left-[340px] w-[80px]' : ''
           }`}
         />
       </nav>

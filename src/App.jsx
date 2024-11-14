@@ -10,6 +10,8 @@ import "./index.css";
 import Navbar from "./components/Navbar";
 import Experience from "./page/Project";
 import AboutMe from "./page/About";
+import ProjectList from "./page/Project2";
+import ContactForm from "./page/Contact";
 
 const App = () => {
   const [size, setSize] = useState(20);
@@ -34,7 +36,8 @@ const App = () => {
       <section id="home"><ProfileSection sizeIncrese={sizeIncrese} /></section>
       <section id="about"> <AboutMe/> </section>
 <section id="experience"> <Experience /> </section>
-<section id="contact">Contact Section</section>
+<section id="project"> <ProjectList /> </section>
+<section id="contact"> <ContactForm/> </section>
 <section id="resume">Resume Section</section>
 
       
