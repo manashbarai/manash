@@ -62,7 +62,7 @@ const Navbar = () => {
 
   
   return (
-    <div ref={navbarRef} className="flex shadow shadow-[#111111] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center bg-zinc-900/30 backdrop-blur-md z-50">
+    <div ref={navbarRef} className="lg:flex md:flex hidden shadow shadow-[#111111] justify-between w-1/2 mx-auto sticky top-0 rounded-b-2xl overflow-hidden items-center bg-zinc-900/30 backdrop-blur-md z-50">
       <div
         ref={logoRef}
         className="logo flex items-center text-gray-400 text-lg font-bold px-4 cursor-pointer"
