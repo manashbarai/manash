@@ -79,7 +79,7 @@ const Experience = () => {
   }, [selectedExperience]);
 
   return (
-    <div className=" text-zinc-500 min-h-screen pt-32 h-[97vh] lg:pt-0 md:pt-0 lg:flex lg:w-1/2 md:w-1/2 w-full  m-auto flex-col items-center justify-center relative">
+    <div className=" text-zinc-500 min-h-screen pt-32 h-[100vh] lg:pt-0 md:pt-0 lg:flex md:flex lg:w-1/2 md:w-1/2 w-full  m-auto flex-col items-center justify-center relative">
       <h2 className="text-3xl font-bold mb-8 w-full">Experience</h2>
       <div className="flex w-full max-w-4xl">
         {/* Left Column */}
@@ -125,7 +125,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-2 lg:bottom-0 md:bottom-0  w-full ">
+      <div className="absolute bottom-2 lg:bottom-1 md:bottom-1  w-full ">
             <p className="text-xs">Knowing that my work has a positive impact gives me a great sense of joy : 😊  </p>
 
       </div>

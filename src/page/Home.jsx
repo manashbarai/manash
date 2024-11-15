@@ -33,7 +33,7 @@ const ProfileSection = ({ sizeIncrese }) => {
   };
 
   return (
-    <div className="lg:w-1/2 w-full md:w-1/2 h-[100vh]  mx-auto pt-48 lg:pt-0 md:pt-0 lg:flex justify-center items-center  relative">
+    <div className="lg:w-1/2 w-full md:w-1/2 h-[100vh]  mx-auto pt-48 lg:pt-0 md:pt-0 lg:flex md:flex justify-center items-center  relative">
       <div className="flex flex-col gap-5">
         <h1
           ref={titleref}

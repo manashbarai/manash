@@ -3,7 +3,7 @@ import { FaChess } from "react-icons/fa";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="  lg:w-1/2 w-full md:w-1/2 m-auto h-[97vh] pt-20  lg:pt-0 md:pt-0 lg:flex flex-col justify-center text-white relative">
+    <section className="  lg:w-1/2 w-full md:w-1/2 m-auto h-[100vh] pt-20  lg:pt-0 md:pt-0 lg:flex md:flex flex-col justify-center text-white relative">
       {/* Text Content */}
       <div className=" m-auto flex flex-col md:flex-row items-center">
         <div className="flex-1 md:mr-8">
@@ -60,7 +60,7 @@ const AboutMe: React.FC = () => {
 
         {/* Image */}
       </div>
-      <div className="absolute font-semibold flex items-center gap-2 bottom-2 lg:bottom-0 md:bottom-0 start-0 text-zinc-600 text-xs tracking-wider">Playing <FaChess className="text-[rgba(235,209,164,0.5)]" size={13} /> at <a href="https://lichess.org/@/mbarai" target="_blank" rel="noopener noreferrer">Lichess</a>
+      <div className="absolute font-semibold flex items-center gap-2 bottom-2 lg:bottom-1 md:bottom-2 start-0 text-zinc-600 text-xs tracking-wider">Playing <FaChess className="text-[rgba(235,209,164,0.5)]" size={13} /> at <a href="https://lichess.org/@/mbarai" target="_blank" rel="noopener noreferrer">Lichess</a>
 
       </div>    </section>
   );

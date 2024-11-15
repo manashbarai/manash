@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className=" text-white text-center h-[90vh] lg:flex flex-col justify-center lg:w-1/2 md:w-1/2 w-full m-auto relative">
+    <div className=" text-white text-center h-[100vh] lg:flex flex-col justify-center lg:w-1/2 md:w-1/2 w-full m-auto relative">
       <h2 className="text-3xl font-bold text-zinc-500 ">Contact</h2>
       <p className="mt-2 text-zinc-300">
         Get in touch with me if you want to discuss a project or maybe just say
