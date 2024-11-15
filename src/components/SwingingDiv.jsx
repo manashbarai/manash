@@ -20,7 +20,7 @@ const SwingingDiv = () => {
 
   
   return (
-    <div  className=" topTo  lg:right-24 md:right-24 right-0   lg:h-[500px] md:h-[500px] w-52 origin-top md:block swinging">
+    <div  className=" topTo  lg:right-24 md:right-24 right-0   lg:h-[500px] md:h-[500px] lg:w-52 md:w-40 w-28 origin-top md:block swinging">
       <div className="relative left-[98px] h-[200px] w-1 bg-black"></div>
       <div className="relative left-[92px] h-[20px] w-4 bg-zinc-500">
         <div
