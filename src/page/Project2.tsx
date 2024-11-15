@@ -92,7 +92,7 @@ const Timeline = () => {
       <div className="relative">
         <div
           style={{ height: "calc(100%)" }}
-          className="absolute w-[6px] top-0 bg-zinc-700 z-50 left-1/2 transform -translate-x-1/2"
+          className="absolute w-[6px] top-0 bg-zinc-700 z-20 left-1/2 transform -translate-x-1/2"
         ></div>
         {projects.map((project, index) => (
           <div
