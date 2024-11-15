@@ -33,7 +33,7 @@ const ProfileSection = ({ sizeIncrese }) => {
   };
 
   return (
-    <div className="lg:w-1/2 w-full md:w-1/2 h-[95vh]  mx-auto flex justify-center items-center  relative">
+    <div className="lg:w-1/2 w-full md:w-1/2 h-[100vh]  mx-auto pt-48 lg:pt-0 md:pt-0 lg:flex justify-center items-center  relative">
       <div className="flex flex-col gap-5">
         <h1
           ref={titleref}
@@ -111,7 +111,7 @@ const ProfileSection = ({ sizeIncrese }) => {
           </span>
         </p>
       </div>
-      <div className="absolute bottom-0 start-0 text-gray-600 text-xs">
+      <div className="absolute bottom-1 start-0 text-gray-600 text-xs">
         Designed with ❤️ and a lot of ☕️
       </div>
     </div>

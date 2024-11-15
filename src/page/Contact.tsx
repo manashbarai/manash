@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className=" text-white text-center h-[100vh] flex flex-col justify-center lg:w-1/2 md:w-1/2 w-full m-auto relative">
+    <div className=" text-white text-center h-[90vh] lg:flex flex-col justify-center lg:w-1/2 md:w-1/2 w-full m-auto relative">
       <h2 className="text-3xl font-bold text-zinc-500 ">Contact</h2>
       <p className="mt-2 text-zinc-300">
         Get in touch with me if you want to discuss a project or maybe just say
@@ -68,7 +68,7 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
 
-      <div className="absolute bottom-0 text-xs flex gap-2">
+      <div className="absolute lg:bottom-0 md:bottom-0 bottom-2 text-xs flex gap-2">
         <p className="">or reach me at</p>
         <a
           href="mailto:hello@nirnejak.com"

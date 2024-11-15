@@ -26,7 +26,7 @@ const App = () => {
  
 
   return (
-    <div className=" bg-zinc-900">
+    <div className=" bg-zinc-900 px-2 lg:px-0 md:px-0">
       <Navbar/>
       <NoiseBackground />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
