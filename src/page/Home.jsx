@@ -2,6 +2,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { MdOutgoingMail } from "react-icons/md";
+
 const ProfileSection = ({ sizeIncrese }) => {
   const titleref = useRef();
   const peraRef = useRef();
@@ -23,12 +26,14 @@ const ProfileSection = ({ sizeIncrese }) => {
       x: 300,
       opacity: 0,
       duration: 1,
-      
     });
   });
+  const openLinkSite = (url) => {
+    window.open(url, "_blank");
+  };
 
   return (
-    <div className="w-1/2 h-[95vh]  mx-auto flex justify-center items-center  relative">
+    <div className="lg:w-1/2 w-full md:w-1/2 h-[95vh]  mx-auto flex justify-center items-center  relative">
       <div className="flex flex-col gap-5">
         <h1
           ref={titleref}
@@ -39,6 +44,42 @@ const ProfileSection = ({ sizeIncrese }) => {
           {" "}
           Manash Barai
         </h1>
+
+        <div className="flex gap-2 sm:flex md:hidden lg:hidden ">
+          <FaGithub
+            onMouseEnter={() => props.sizeIncrese(1)}
+            onMouseLeave={() => props.sizeIncrese(20)}
+            size={30}
+            onClick={() => openLinkSite("https://github.com/manashbarai")}
+            className="text-zinc-300  text-2xl shadow-lg hover:scale-125 transition-all duration-300 rounded-full max-w-12 p-1 max-h-20"
+          />
+          <FaLinkedinIn
+            onMouseEnter={() => props.sizeIncrese(1)}
+            onMouseLeave={() => props.sizeIncrese(20)}
+            size={30}
+            onClick={() =>
+              openLinkSite(
+                "https://www.linkedin.com/in/manash-barai-077606209/"
+              )
+            }
+            className="text-zinc-300   text-2xl shadow-lg hover:scale-125 transition-all duration-300 rounded-full max-w-12 p-1 max-h-20"
+          />
+          <FaTwitter
+            onMouseEnter={() => props.sizeIncrese(1)}
+            onMouseLeave={() => props.sizeIncrese(20)}
+            size={30}
+            onClick={() => openLinkSite("https://x.com/manashjbarai")}
+            className="text-zinc-300  text-2xl shadow-lg hover:scale-125 transition-all duration-300 rounded-full max-w-12 p-1 max-h-20"
+          />
+          <MdOutgoingMail
+            onMouseEnter={() => props.sizeIncrese(1)}
+            onMouseLeave={() => props.sizeIncrese(20)}
+            size={33}
+            onClick={() => openLinkSite("mailto:manashjbarai@gmail.com")}
+            className="text-zinc-300 text-2xl shadow-lg hover:scale-125 transition-all duration-300 rounded-full max-w-12 p-1 max-h-20"
+          />
+        </div>
+
         <p
           ref={blur}
           className=" tracking-wider  text-orange-50 font-semibold"
@@ -58,7 +99,6 @@ const ProfileSection = ({ sizeIncrese }) => {
           onMouseLeave={() => sizeIncrese(20, 900)}
           onMouseEnter={() => sizeIncrese(1, 100)}
         >
-         
           Currently working with{" "}
           <span className="text-gradient-green font-semibold tracking-wide">
             {" "}
@@ -71,7 +111,9 @@ const ProfileSection = ({ sizeIncrese }) => {
           </span>
         </p>
       </div>
-       <div className="absolute bottom-0 start-0 text-gray-600 text-xs">Designed with ❤️ and a lot of ☕️</div> 
+      <div className="absolute bottom-0 start-0 text-gray-600 text-xs">
+        Designed with ❤️ and a lot of ☕️
+      </div>
     </div>
   );
 };

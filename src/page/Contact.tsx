@@ -27,9 +27,9 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className=" text-white text-center h-[100vh] flex flex-col justify-center w-1/2 m-auto relative">
+    <div className=" text-white text-center h-[100vh] flex flex-col justify-center lg:w-1/2 md:w-1/2 w-full m-auto relative">
       <h2 className="text-3xl font-bold text-zinc-500 ">Contact</h2>
-      <p className="mt-2">
+      <p className="mt-2 text-zinc-300">
         Get in touch with me if you want to discuss a project or maybe just say
         hi :)
       </p>
@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
           placeholder="Name"
           value={formData.name}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md shadow-sm shadow-[rgba(235,209,164,0.5)] focus:outline-none focus:shadow-[rgba(235,209,164,1)]"
           required
         />
         <input
@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md shadow-sm shadow-[rgba(235,209,164,0.5)] focus:outline-none focus:shadow-[rgba(235,209,164,1)]"
           required
         />
         <textarea
@@ -57,12 +57,12 @@ const ContactForm: React.FC = () => {
           placeholder="Message"
           value={formData.message}
           onChange={handleChange}
-          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-zinc-600"
+          className="w-full p-3 mb-4 bg-zinc-800 text-white rounded-md h-32 shadow-sm shadow-[rgba(235,209,164,0.5)] focus:outline-none focus:shadow-[rgba(235,209,164,1)]"
           required
         />
         <button
           type="submit"
-          className="w-full p-3 bg-zinc-500 text-black font-bold rounded-md hover:bg-zinc-300 transition duration-200"
+          className="w-full p-3 bg-zinc-800 text-gray-100 tracking-widest font-bold rounded-full transition-all duration-200 shadow-sm shadow-[rgba(235,209,164,0.5)]  hover:shadow-[rgba(235,209,164,1)]"
         >
           SEND
         </button>
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
           href="mailto:hello@nirnejak.com"
           className="text-zinc-400 hover:text-zinc-300 transition duration-200"
         >
-          🔺 hello@nirnejak.com
+          🔺 manashjbarai@gmail.com
         </a>
       </div>
     </div>

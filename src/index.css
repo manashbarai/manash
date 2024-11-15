@@ -101,7 +101,7 @@ button,
 
 @keyframes light {
   0% {
-    top: -1000px;
+    top: -200px;
   }
   100% {
     top:0px;
@@ -126,7 +126,6 @@ button,
   position: fixed;
   animation: social 1.5s ease forwards;
   
-animation-delay:1s;
   
 
 }
@@ -141,5 +140,10 @@ animation-delay:1s;
 
 }
 
-
+@media screen and (max-width: 640px) {
+  .fromBottom {
+    position: static; /* Change position to static */
+    display: none;
+  }
+}
 /* //navbar */

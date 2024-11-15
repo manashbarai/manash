@@ -79,7 +79,7 @@ const Experience = () => {
   }, [selectedExperience]);
 
   return (
-    <div className=" text-zinc-500 min-h-screen flex w-1/2 m-auto flex-col items-center justify-center relative">
+    <div className=" text-zinc-500 min-h-screen flex lg:w-1/2 md:w-1/2 w-full  m-auto flex-col items-center justify-center relative">
       <h2 className="text-3xl font-bold mb-8 w-full">Experience</h2>
       <div className="flex w-full max-w-4xl">
         {/* Left Column */}
@@ -102,11 +102,11 @@ const Experience = () => {
         </div>
 
         {/* Right Column */}
-        <div className="w-2/3 pl-8">
+        <div className="w-full lg:w-2/3 md:w-2/3 pl-1">
           <h3 className="text-xl font-semibold">
             {experienceDetails[selectedExperience].role}
           </h3>
-          <p className="text-sm text-zinc-400 mb-4">
+          <p className="text-sm text-[rgba(255,223,167,0.9)]  capitalize mb-4">
             {experienceDetails[selectedExperience].duration}
           </p>
           <ul className="list-disc space-y-2 pl-5">

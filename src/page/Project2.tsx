@@ -85,7 +85,7 @@ const Timeline = () => {
       <h1 className="text-3xl font-bold mb-8 w-full my-6 text-zinc-500">
         Projects
       </h1>
-      <p className="capitalize">
+      <p className="capitalize text-zinc-300">
         Some things which I built during my job and freelancing that helped my
         IT career growth:
       </p>

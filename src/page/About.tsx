@@ -3,7 +3,7 @@ import { FaChess } from "react-icons/fa";
 
 const AboutMe: React.FC = () => {
   return (
-    <section className="  w-1/2 m-auto h-[100vh] flex flex-col justify-center text-white relative">
+    <section className="  lg:w-1/2 w-full md:w-1/2 m-auto h-[100vh] flex flex-col justify-center text-white relative">
       {/* Text Content */}
       <div className=" m-auto flex flex-col md:flex-row items-center">
         <div className="flex-1 md:mr-8">

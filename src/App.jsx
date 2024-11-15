@@ -30,7 +30,7 @@ const App = () => {
       <Navbar/>
       <NoiseBackground />
       <LeftSocialMedia sizeIncrese={sizeIncrese} />
-      <RightMail sizeIncrese={sizeIncrese} />
+        <RightMail sizeIncrese={sizeIncrese} />
 
 
       <section id="home"><ProfileSection sizeIncrese={sizeIncrese} /></section>

@@ -38,7 +38,7 @@ const Navbar = () => {
     tl.from(logoRef.current, {
       opacity: 0,
       y: -50,
-      duration: 2,
+      duration: 0,
       ease: "power2.out",
     });
 
