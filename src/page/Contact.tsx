@@ -23,6 +23,8 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(formData);
+    
     // Handle form submission (e.g., send form data to an API or email service)
   };
 

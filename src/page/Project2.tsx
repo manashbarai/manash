@@ -48,6 +48,14 @@ const projects = [
      url:"https://kolkatasattapro.in/"
   },
   {
+    title: "My Portfolio",
+    description:
+      "A Unique design port folio , for logo using canva ,use custom animation and Gsap",
+    skill: ["React JS","Gsap","Canva","Tailwind css"],
+    oppositeContent: "Sep 2024 To Running",
+     url:"https://manash-kappa.vercel.app/"
+  },
+  {
     title: "Result Auto",
     description:
       "A lottery result publication that auto-updates results using API and scraping from other sites.",
@@ -81,7 +89,7 @@ const Timeline = () => {
   }
 
   return (
-    <div className="relative max-w-3xl mx-auto text-zinc-200 pt-16">
+    <div className="relative md:w-1/2 lg:w-1/2 mx-auto text-zinc-200 pt-16 ">
       <h1 className="text-3xl font-bold mb-8 w-full my-6 text-zinc-500">
         Projects
       </h1>
