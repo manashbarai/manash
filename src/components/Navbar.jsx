@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import clickAudio from "/audio/clickOption.wav";
 import HamburgerMenu from "./HamburgerMenu";
-import logo from '/logo.png'
+import logo from "/logo.png";
 const Navbar = () => {
   const [hoverPosition, setHoverPosition] = useState("start-home");
   const navbarRef = useRef();
@@ -14,7 +14,12 @@ const Navbar = () => {
   const audioRef = useRef(new Audio(clickAudio));
 
   const handleMouseEnter = (position) => {
-    setHoverPosition(position);
+
+   
+     setHoverPosition(position);
+
+
+  
   };
 
   const handleClick = (e, section) => {
@@ -24,6 +29,10 @@ const Navbar = () => {
     const audio = audioRef.current;
     audio.currentTime = 0;
     audio.play();
+    if(section==='resume'){
+      window.open("/manash.pdf", "_blank", "noopener,noreferrer");
+
+    }
 
     // Smooth scroll to the target section
     const targetElement = document.getElementById(section);
@@ -35,7 +44,7 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   useGSAP(() => {
     const tl = gsap.timeline();
-  
+
     // First, animate the logo
     tl.from(logoRef.current, {
       opacity: 0,
@@ -43,7 +52,7 @@ const Navbar = () => {
       duration: 0.3, // Reduced duration
       ease: "power2.out",
     });
-  
+
     // Then, animate the navbar entrance from the top
     tl.from(navbarRef.current, {
       y: -100,
@@ -51,7 +60,7 @@ const Navbar = () => {
       duration: 0.4, // Reduced duration
       ease: "power2.out",
     });
-  
+
     // Finally, stagger the links with a fade-in effect
     tl.from(linksRef.current, {
       opacity: 0,
@@ -61,25 +70,19 @@ const Navbar = () => {
       duration: 0.5, // Reduced duration
     });
   }, [mobileMenu]);
-  
 
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
   };
   useEffect(() => {
-    const handleBodyClick = () => {
-      
-      
-      
-      
-    };
+    const handleBodyClick = () => {};
 
     // Add event listener to the body
-    document.body.addEventListener('click', handleBodyClick);
+    document.body.addEventListener("click", handleBodyClick);
 
     // Cleanup the event listener on unmount
     return () => {
-      document.body.removeEventListener('click', handleBodyClick);
+      document.body.removeEventListener("click", handleBodyClick);
     };
   }, []);
 
@@ -94,7 +97,12 @@ const Navbar = () => {
           className="logo flex items-center text-gray-400 text-lg font-bold px-4 cursor-pointer"
           onClick={(e) => handleClick(e, "home")} // Scrolls to home section on logo click
         >
-          <img src={logo} width={50} height={30}  className=" mix-blend-screen" />
+          <img
+            src={logo}
+            width={50}
+            height={30}
+            className=" mix-blend-screen"
+          />
         </div>
 
         <nav className="relative z-10 mr-2 mb-1 justify-end flex items-center gap-4 text-gray-400 font-semibold">
@@ -152,8 +160,12 @@ const Navbar = () => {
                 handleClick(e, "home"), toggleMenu();
               }} // Scrolls to home section on logo click
             >
-                        <img src={logo} width={50} height={30}  className=" mix-blend-screen" />
-
+              <img
+                src={logo}
+                width={50}
+                height={30}
+                className=" mix-blend-screen"
+              />
             </div>
 
             <nav className="relative z-10 mr-2 mb-1 justify-end flex flex-col gap-4 px-4   text-gray-400 font-semibold">
