@@ -27,13 +27,13 @@
       left: 0;
     }
     100% {
-      left: 420px; /* Moves to the right */
+      left: 350px; /* Moves to the right */
     }
   }
   
   @keyframes rightToLeft {
     0% {
-      left: 420px;
+      left: 350px;
     }
     100% {
       left: 0; /* Moves back to the left */
