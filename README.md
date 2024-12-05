@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with Vite and React showcasing my work as a Full Stack Developer.
 
 <div align="center">
-  <img src="./screenshots/hero-section.png" alt="Portfolio Hero Section" width="100%">
+  <img src="./Screenshot 2024-12-06 005325.png" alt="Portfolio Hero Section" width="100%">
 </div>
 
 ## 🚀 Features
