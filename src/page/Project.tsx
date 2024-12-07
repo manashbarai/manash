@@ -6,7 +6,7 @@ const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState("Adopted_Brain");
 
   const experiences = [
-    { title: "Adopted_Brain", company: "" },
+    { title: "Adopted Brain", company: "" },
     
     { title: "Toast Beat", company: "" },
     { title: "Siliconpin", company: "" },
@@ -31,7 +31,7 @@ const Experience = () => {
    
     "Toast Beat": {
       role: "Full-Stack Developer @ Toast Beat (web)",
-      duration: "Jul 2023 – Jan 2024",
+      duration: "Jul 2023 – Apr 2024",
       description: [
         "Developed a job portal for the IT field with separate sign-up forms for recruiters and job seekers.",
         "Implemented a black and white theme for a clean, professional design.",
