@@ -95,20 +95,16 @@ const ProfileSection = ({ sizeIncrese }) => {
         </p>
         <p
           ref={peraRef}
-          className="text-orange-50"
+          className="text-orange-50 flex flex-wrap"
           onMouseLeave={() => sizeIncrese(20, 900)}
           onMouseEnter={() => sizeIncrese(1, 100)}
         >
           Currently working with{" "}
-          <span className="text-gradient-green font-semibold tracking-wide">
+          <span className="text-gradient-green ml-2 font-semibold tracking-wide flex gap-2 items-center" >
             {" "}
-            @march
+            <img width={20} height={20} className="mix-blend-screen" src="/adaptedbrainshq_logo.jpeg" alt="" /> adopted brain
           </span>{" "}
-          and{" "}
-          <span className="text-gradient-purple font-semibold tracking-wide">
-            {" "}
-            @betaZen InfoTech
-          </span>
+         
         </p>
       </div>
       <div className="absolute bottom-1 start-0 text-gray-600 text-xs">

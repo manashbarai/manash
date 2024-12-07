@@ -3,41 +3,32 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Experience = () => {
-  const [selectedExperience, setSelectedExperience] = useState("Freelance");
+  const [selectedExperience, setSelectedExperience] = useState("Adopted_Brain");
 
   const experiences = [
-    { title: "Freelance", company: "" },
-    { title: "Edureify", company: "" },
+    { title: "Adopted_Brain", company: "" },
+    
     { title: "Toast Beat", company: "" },
     { title: "Siliconpin", company: "" },
   ];
 
   const experienceDetails = {
-    Freelance: {
-      role: "Full-stack  Dveloper (mobile & web )",
-      duration: "Jul 2024 – Currrent",
+    Adopted_Brain: {
+      role: "Full-Stack @ adopted brain ",
+      duration: "May 2024 – Present",
       description: [
-        "Developed web and mobile applications, using React Native Expo for mobile and React for web applications.",
-        "Consulted with clients to gather requirements, often clarifying vague or evolving needs to ensure project success.",
+        "Developed admin dashboard for Sportz Point, enhancing content management efficiency.",
+        "Developed sportzpoint web app for with nice mordern ui ux ",
+        "Created robust lottery results tracking system with web and app interfaces for user engagement.",
 
-        "Collaborated with other developers as a freelancer, contributing to various projects and delivering quality solutions.",
-        "Specialized in building responsive and accessible web interfaces, ensuring cross-platform compatibility and usability.",
+        "Engineered high-performance platform for real-time publishing of lottery results.",
+        
       ],
       
        
     },
 
-    Edureify: {
-      role: "Full-Stack @ Edureify (web) ",
-      duration: "Feb 2024 – may 2024",
-      description: [
-        "Developed a CRM system, collaborating with the project manager to define requirements and deliver a clear vision to the design team.",
-        "Consulted with managers to gather business needs and translated them into actionable design and development tasks.",
-        "Worked closely with designers to ensure that the user interface met business objectives and optimized user experience.",
-
-        "Focused on performance optimization to ensure the system ran efficiently at scale, improving overall user experience.",
-      ]
-    },
+   
     "Toast Beat": {
       role: "Full-Stack Developer @ Toast Beat (web)",
       duration: "Jul 2023 – Jan 2024",

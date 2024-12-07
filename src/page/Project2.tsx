@@ -8,6 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    title: "SportzPoint",
+    description:
+      "Develop a comprehensive web application with a fully functional admin dashboard, designed to streamline management tasks and provide a seamless user experience for administrators.",
+    oppositeContent: "Oct 2024 To present",
+    skill: ["Next JS", "Node JS", "Mongo DB", "Tailwind"],
+    url:"https://sportzpoint.com/",
+  },
+  {
     title: "Tap2Hire",
     description:
       "Developed a job portal for the IT field with separate sign-up forms for recruiters and users.",
