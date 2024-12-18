@@ -6,7 +6,7 @@ const Experience = () => {
   const [selectedExperience, setSelectedExperience] = useState("Adopted_Brain");
 
   const experiences = [
-    { title: "Adopted Brain", company: "" },
+    { title: "Adopted_Brain", company: "" },
     
     { title: "Toast Beat", company: "" },
     { title: "Siliconpin", company: "" },
